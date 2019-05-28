@@ -1,0 +1,206 @@
+/*
+body{
+  background-color: #000;
+  padding: 1%;
+  color: #fff;
+  font-family: "Pixellari", Helvetica, Arial, sans-serif;
+  font-size: 12rem;
+  text-align: center;
+}
+
+.text-js{
+  opacity: 0;
+}
+
+.cursor{
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -5px;
+  width: 2px;
+  // Change colour of Cursor Here
+  background-color: white;
+  z-index: 1;
+  animation: flash 0.5s none infinite alternate;
+}
+
+@keyframes flash{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.console{
+  font-family: "Pixellari","Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+  margin-bottom: 100px;
+}
+
+input[type="button"]{
+  cursor: pointer;
+}
+
+#programme{
+  color: #272727;
+  text-align: left;
+  font-size: 1.16vw;
+}
+
+.programme-text{
+  color: #fff;
+}
+
+#blue{
+  color: blue;
+}
+*/
+/*/
+@font-face {
+  font-family: 'Rubik Mono One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik Mono One Regular'), local('RubikMonoOne-Regular'), url('./cost.woff2') format('woff2');
+}/**/
+html, body {
+  display: flex;
+}
+
+@font-face {
+  font-family: 'Pixellari';
+  src: url(../fonts/Pixellari.ttf);
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  align-items: center;
+  min-height: 100%;
+  font-size: 1.4vw;
+  font-family: 'Pixellari', sans-serif;
+  text-shadow: 0 0 0.05em #000;
+  line-height: 1em;
+  color: #171717;
+  text-rendering: optimizeLegibility;
+  background-color: black;
+}
+
+h1  {
+  font-size: 15vw;
+  color: white;
+  margin-top: 10vw;
+}
+
+h2  {
+  font-size: 5vw;
+  color: white;
+  margin-top: 5vw;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.white{
+  color: white;
+  font-size: 1.4vw;
+}
+
+.grey{
+  color: #504f4f;
+  font-size: 1.4vw;
+}
+
+.grey-italic{
+  color: grey;
+  font-style: italic;
+  font-size: 1.4vw;
+}
+
+.cursor {
+  height: 0.71em;
+  width: 0.79em;
+  margin-left: 0.05em;
+  border-radius: 0.03em;
+  background-color: #666;
+  display: inline-block;
+  will-change: transform;
+  box-shadow: 0 0 0.1em #666, inset 0 0 0.2em #aaa;
+}
+
+.cursor2 {
+  height: 0.71em;
+  width: 0.1em;
+  margin-left: 0.05em;
+  border-radius: 0.03em;
+  background-color: #666;
+  display: inline-block;
+  will-change: transform;
+}
+
+.blink {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch:before, .glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  background-color: black;
+  overflow: hidden;
+  will-change: transform;
+  clip-path: polygon(0% 0%);
+}
+
+.glitch:before {
+  animation: glitch-before 30.3331s infinite linear alternate-reverse;
+}
+
+.glitch:after {
+  left: -0.1em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  animation: glitch-after 20s infinite linear alternate-reverse;
+}
+
+.glitch:hover{
+/*  text-transform: uppercase;
+  text-decoration-line: line-through;
+  font-size: 2vw; */
+  cursor: pointer;
+}
+
+.hover_img  { position:relative; }
+.hover_img span { position:absolute; display:none; z-index:99;}
+.hover_img:hover span { display:block; }
+
+.hover_img .euro-left { margin-left: 5vw;}
+
+.hover_img .map-right { margin-left: 50vw;}
+
+.mobile{
+  display: none;
+}
